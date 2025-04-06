@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santiago Rivarola - Info Personal</title>
+  <style>
+    :root {
+      --fondo: #f8fafc;
+      --primario: #0f172a;
+      --secundario: #22c55e;
+      --texto: #1e293b;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primario);
+      color: var(--blanco);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--blanco);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secundario);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .portrait {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .portrait img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      border: 4px solid var(--secundario);
+      animation: zoomIn 1s ease-in-out;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .portrait img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .gallery {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      border: 3px solid var(--primario);
+      animation: fadeUp 1s ease-in-out;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      filter: contrast(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--primario);
+      color: var(--blanco);
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      background-color: var(--secundario);
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-links a:hover {
+      background-color: #16a34a;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Santiago Rivarola</strong></div>
+    <nav>
+      <a href="#quien-soy">Quién soy</a>
+      <a href="#cambio-fisico">Mi cambio físico</a>
+      <a href="#asesoria">Asesoría</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="quien-soy">
+    <div class="hero-text">
+      <h1>¿Quién soy?</h1>
+      <p>Me llamo <strong>Santiago Ezequiel Rivarola</strong>, nací el 9 de octubre de 2004 y tengo 20 años. Me apasiona el fitness y todo lo relacionado al deporte. A lo largo de estos años, el entrenamiento no solo transformó mi cuerpo, sino también mi forma de ver la vida. Vengo a mostrarte mi evolución y motivarte a iniciar tu propio camino hacia una vida más saludable, activa y llena de entusiasmo.</p>
+    </div>
+    <div class="portrait">
+      <img src="Imagen de WhatsApp 2025-04-06 a las 00.47.17_47932a49.jpg" alt="Foto espalda Santiago">
+    </div>
+  </section>
+
+  <section id="cambio-fisico">
+    <h1>Mi cambio físico</h1>
+    <p>Estos son los resultados de 4 años de constancia, esfuerzo y disciplina. A la izquierda, mi físico en 2021. A la derecha, mi estado actual en 2025.</p>
+    <div class="gallery">
+      <div>
+        <img src="Imagen de WhatsApp 2025-04-06 a las 00.35.16_a42a7cab.jpg" alt="Antes - 2021">
+        <p style="text-align:center;">Año 2021</p>
+      </div>
+      <div>
+        <img src="Imagen de WhatsApp 2025-04-06 a las 00.30.00_0aa9613a.jpg" alt="Después - 2025">
+        <p style="text-align:center;">Año 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="asesoria">
+    <h1>¿Querés transformar tu físico?</h1>
+    <p>Si estás listo para cambiar tu cuerpo y tus hábitos, estoy acá para ayudarte. Te ofrezco asesoramiento personalizado, planes de entrenamiento enfocados en hipertrofia y una guía completa para lograr tus objetivos.</p>
+    <p><strong>Contactate conmigo a través de:</strong></p>
+    <div class="contact-links">
+      <a href="https://wa.me/542494381346" target="_blank">WhatsApp</a>
+      <a href="mailto:rivarolasantiago636@gmail.com">Email</a>
+      <a href="https://instagram.com/santirivarola4" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>&copy; 2025 Santiago Rivarola. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
